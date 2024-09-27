@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video no Background</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'Trajan Pro';
+            src: url('fonts/TrajanPro-Regular.ttf') format('truetype');
+        }
+
+        .background-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .background-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .box {
+            position: relative;
+            z-index: 10;
+            color: white;
+            font-family: 'Trajan Pro', serif;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box img {
+            width: 800px; /* Aumente o tamanho do logotipo */
+            height: auto;
+        }
+
+        .box p {
+            font-size: 24px;
+            line-height: 1.5;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Efeito glow */
+            margin: 0;
+        }
+
+        .unmute-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .unmute-button img {
+            width: 600px; /* Aumente o tamanho do botão */
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .unmute-button:hover img {
+            transform: scale(1.1);
+        }
+
+        .unmute-button:active img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="background-section">
+            <video id="bg-video" src="assets/hk-classico.mp4" autoplay loop muted></video>
+        </div>
+        <div class="box">
+            <div class="conteudo">
+                <img src="assets/logotipo.png" alt="logotipo hollow knight">
+                <p>
+                    Em terras distantes, pronunciam seu nome com reverência e lamentação. Pois nenhum foi capaz de domar nossas almas selvagens, e mesmo assim você cumpriu o desafio. Sob a vigilância mais pálida, você ensinou, nós mudamos, instintos básicos foram resgatados. Um mundo que você deu para insetos e bestas como eles nunca sonharam.
+                </p>
+            </div>
+        </div>
+        <button class="unmute-button" id="show-text-btn">
+            <img src="assets/continuar.png" alt="Continuar">
+        </button>
+    </section>
+
+    <!-- Elemento de áudio para tocar o som de confirmação -->
+    <audio id="confirm-sound" src="assets/confirmar.mp3"></audio>
+
+    <script>
+        document.getElementById('show-text-btn').addEventListener('click', function() {
+            var audio = document.getElementById('confirm-sound');
+            audio.play(); // Reproduz o som
+            setTimeout(function() {
+                window.location.href = 'main-page.html'; // Redireciona para a nova página após a reprodução do som
+            }, audio.duration * 500); // Espera o tempo total do áudio para redirecionar
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Página</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Inclua o CSS se precisar -->
+    <style>
+        @font-face {
+            font-family: 'Trajan Pro';
+            src: url('fonts/TrajanPro-Regular.ttf') format('truetype');
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            position: relative;
+            overflow: auto; /* Permite a rolagem se o conteúdo exceder a altura da tela */
+            text-align: center;
+        }
+
+        .background-section {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .background-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .logo-container {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo-container img {
+            width: 600px;
+            height: auto;
+        }
+
+        .image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 400px;
+            height: auto;
+        }
+
+        .text-below-image {
+            color: white;
+            font-size: 24px;
+            margin-top: 10px;
+            font-family: 'Trajan Pro', serif;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .custom-button {
+            display: block;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            margin: 20px auto;
+        }
+
+        .custom-button img {
+            width: 400px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+        }
+
+        .button-description {
+            color: white;
+            font-size: 18px;
+            margin-top: 10px;
+            font-family: 'Trajan Pro', serif;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .button-description:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .button-container button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .button-container button img {
+            width: 60px;
+            height: auto;
+        }
+
+        .button-container button:hover img {
+            transform: scale(1.1);
+        }
+
+        .button-container button:active img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-section">
+        <video id="bg-video" src="assets/sonhos-escondidos.mp4" autoplay loop muted></video>
+    </div>
+
+    <div class="logo-container">
+        <img src="assets/logotipo.png" alt="Logotipo">
+    </div>
+
+    <div class="image-container">
+        <img src="assets/oque-e.png" alt="O que é">
+        <div class="text-below-image">
+            Hollow Knight é um dos melhores, se não for o melhor, jogo indie da história. Um jogo lindo, com personagens carismáticos, com uma história profunda, jogabilidade incrível e ambientação impecável. Algo extremamente difícil de se encontrar nos dias de hoje.
+        </div>
+        <div class="button-description" onclick="handleClick()">
+            Saiba mais sobre hollow knight
+        </div>
+        <!-- Botão com imagem e texto explicativo abaixo -->
+        <img src="assets/amuletos.png" alt="Amuletos" class="custom-button">
+        <div class="text-below-image">
+            Os amuletos são uma das mecânicas mais importantes do jogo. Eles são itens colecionáveis que concedem diversas habilidades, variando desde aumentar o seu dano até te transformação em uma lesma quando se cura.
+        </div>
+        <div class="button-description" onclick="handleClickAmuletos()">
+            Saiba mais sobre os amuletos
+        </div>
+        <!-- Magias-->
+        <img src="assets/magias.png" alt="Magias" class="custom-button">
+        <div class="text-below-image">
+            As magias são uma das melhores habilidades do jogo. Elas ajudam muito no jogo, existe tem magias principais e cada uma possui uma evolução, aumentando o dano total.
+        </div>
+        <div class="button-description" onclick="handleClickMagias()">
+            Saiba mais sobre as magias
+        </div>
+        <!-- Habilidades-->
+        <img src="assets/habilidades.png" alt="Habilidades" class="custom-button">
+        <div class="text-below-image">
+            As habilidades são, indiscutivelmente, a mecânica mais importante do jogo. É literalmente impossível avançar sem elas, tanto que até os speedrunners, buscam obter todas as habilidades da forma mais rápida possível.
+        </div>
+        <div class="button-description" onclick="handleClickHabilidades()">
+            Saiba mais sobre as habilidades
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button onclick="changeVideo('assets/sonhos-escondidos.mp4')">
+            <img src="assets/sonhos-escondidos.png" alt="Sonhos Escondidos">
+        </button>
+        <button onclick="changeVideo('assets/trupe-grimm.mp4')">
+            <img src="assets/trupe-grimm.png" alt="Trupe Grimm">
+        </button>
+        <button onclick="changeVideo('assets/sangue-vital.mp4')">
+            <img src="assets/sangue-vital.png" alt="Sangue Vital">
+        </button>
+        <button onclick="changeVideo('assets/deus-mestre.mp4')">
+            <img src="assets/deus-mestre.png" alt="Deus Mestre">
+        </button>
+    </div>
+
+    <script>
+        function changeVideo(src) {
+            var video = document.getElementById('bg-video');
+            video.src = src;
+            video.muted = false;  // Desmutar o vídeo
+            video.volume = 0.5;  // Ajustar o volume para 50%
+            video.play();
+        }
+
+        function handleClick() {
+            window.location.href = 'oque-e.html';
+        }
+
+        function handleClickAmuletos() {
+            window.location.href = 'amuletos.html';
+        }
+
+        function handleClickHabilidades() {
+            window.location.href = 'habilidades.html';
+        }
+
+        function handleClickChefes() {
+            window.location.href = 'chefes.html';
+        }
+
+        function handleClickMagias() {
+            window.location.href = 'magias.html';
+        }
+    </script>
+
+</body>
+</html>

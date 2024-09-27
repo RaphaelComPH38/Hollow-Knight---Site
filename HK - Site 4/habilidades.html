@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Inclua o CSS se precisar -->
+    <style>
+        @font-face {
+            font-family: 'Trajan Pro';
+            src: url('fonts/TrajanPro-Regular.ttf') format('truetype');
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: white;
+            text-align: center;
+        }
+
+        .content-container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 10;
+        }
+
+        .top-image {
+            width: 1000px; /* Diminuído a largura para 250px */
+            height: auto;
+            margin-bottom: 10px;
+            margin-left: 400px;
+        }
+
+        .skill-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .skill-image {
+            width: 300px;
+            height: auto;
+            margin-left: 600px;
+            flex-shrink: 0;
+        }
+
+        .skill-details {
+            max-width: 1000px;
+            text-align: left;
+            margin-left: 100px;
+        }
+
+        .skill-details h2 {
+            font-family: 'Trajan Pro', serif;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            font-size: 62px;
+            margin-bottom: 10px;
+        }
+
+        .skill-details p {
+            font-family: 'Trajan Pro', serif;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 5px;
+        }
+
+        .skill-details .skill-description {
+            font-size: 24px;
+            font-style: italic;
+        }
+
+        .bottom-image {
+            margin-top: 20px;
+        }
+
+        .image-cima {
+            width: 1000px; /* Ajuste a largura conforme necessário */
+            height: auto;
+            margin-left: -8%;
+        }
+
+        .image-baixo {
+            width: 1000px; /* Ajuste a largura conforme necessário */
+            height: auto;
+            margin-left: -8%;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .back-button img {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button img:hover {
+            transform: scale(1.1);
+        }
+
+        .back-button img:active {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="main-page.html" class="back-button">
+        <img src="assets/voltar.png" alt="Voltar">
+    </a>
+
+    <div class="content-container">
+        <!-- Imagem no topo da página -->
+        <img src="assets/habilidades.png" alt="Habilidades" class="top-image">
+
+        <!--Garra de Louva-a-Deus-->
+        <div class="skill-section">
+            <img src="assets/garra-de-louva-a-deus.png" alt="Garra de Louva-a-Deus" class="skill-image">
+            <div class="skill-details">
+                <img src="assets/cima.png" alt="Cima" class="image-cima">
+                <h2>Garra de Louva-a-Deus</h2>
+                <p>Uma garra esculpida de osso. Permite que o usuário se agarre em paredes e pule delas.</p>
+                <p class="skill-description">Quando estiver perto de uma parede no ar, pressione na direção da parede para se agarrar a ela e deslizar para baixo. Pressione PULO para se lançar diagonalmente para longe da parede.</p>
+                <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+            </div>
+        </div>
+
+        <!--Coração de Cristal-->
+        <div class="skill-section">
+            <img src="assets/coracao-de-cristal.png" alt="Coracao de Cristal" class="skill-image">
+            <div class="skill-details">
+                <img src="assets/cima.png" alt="Cima" class="image-cima">
+                <h2>Coração de Cristal</h2>
+                <p>O núcleo de energia de um golem minerador antigo, formado em torno de um cristal potente. A energia do cristal pode ser canalizada para lançar o seu portador para frente em velocidades perigosas.</p>
+                <p class="skill-description">Ele permite que o usuário voe horizontalmente para frente até colidir com uma parede ou inimigo que não seja morto pela investida.</p>
+                <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+            </div>
+        </div>
+
+        <!--Asas do Monarca-->
+        <div class="skill-section">
+            <img src="assets/asas-do-monarca.png" alt="Asas do Monarca" class="skill-image">
+            <div class="skill-details">
+                <img src="assets/cima.png" alt="Cima" class="image-cima">
+                <h2>Asas do Monarca</h2>
+                <p>Asas de um material etéreo que brilha no escuro. Permite que seu portador salte novamente no ar.</p>
+                <p class="skill-description">Pressione PULO enquanto estiver no ar para dar um salto duplo. Recarrega quando o usuário aterrissa no chão, quica em um algo ou se agarra/pula de uma parede usando a Garra de Louva-a-Deus.</p>
+                <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+            </div>
+        </div>
+
+        <!--Lágrima de Isma-->
+        <div class="skill-section">
+            <img src="assets/lagrima-de-isma.png" alt="Lágrima de Isma" class="skill-image">
+            <div class="skill-details">
+                <img src="assets/cima.png" alt="Cima" class="image-cima">
+                <h2>Lágrima de Isma</h2>
+                <p>Fruta formada de uma única lágrima endurecida. Uma vez ingerida, fornece proteção contra as piscinas abrasivas e ácidas encontradas em algumas partes de Hallownest.</p>
+                <p class="skill-description">Permite o usuário nadar em ácido sem sofrer danos</p>
+                <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+            </div>
+        </div>
+
+        <!--Portal dos Sonhos-->
+        <div class="skill-section">
+            <img src="assets/portal-dos-sonhos.png" alt="Portal dos Sonhos" class="skill-image">
+            <div class="skill-details">
+                <img src="assets/cima.png" alt="Cima" class="image-cima">
+                <h2>Portal dos Sonhos</h2>
+                <p>Permite que o portador viaje instantaneamente através dos sonhos.</p>
+                <p class="skill-description">Segure BAIXO enquanto usa o Ferrão dos Sonhos para abrir um Portal dos Sonhos. Segure CIMA enquanto usa o Ferrão dos Sonhos para viajar para o Portal dos Sonhos. Algumas áreas podem não ter uma conexão forte com qualquer sonho, desativando o uso do Portal dos Sonhos.</p>
+                <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+            </div>
+        </div>
+
+        <!--Percepção do Mundo-->
+        <div class="skill-section">
+            <img src="assets/percepcao-do-mundo.png" alt="Percepção do Mundo" class="skill-image">
+            <div class="skill-details">
+                <img src="assets/cima.png" alt="Cima" class="image-cima">
+                <h2>Percepção do Mundo</h2>
+                <p>Receptáculo. Mesmo preso, deve saber o estado do mundo.</p>
+                <p class="skill-description">Exibe a porcentagem atual de Conclusão no inventário e no arquivo salvo no menu principal. Também mostra o número de inimigos encontrados e necessários no Diário do Caçador.</p>
+                <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+            </div>
+        </div>        
+
+        <!-- Adicione mais seções de habilidades conforme necessário -->
+    </div>
+
+
+    <div class="container">
+        <!-- Primeiro conjunto: Espírito Vingativo/Alma Sombria -->
+        <div class="flip" style="top: 740px;">
+            <div class="manto-de-asa-de-mariposa">
+                <div class="skill-section">
+                    <img src="assets/manto-de-asa-de-mariposa.png" alt="Manto de Asa de Mariposa" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Manto de Asa de Mariposa</h2>
+                        <p>Manto feito com fibras da asa de uma mariposa. Permite que o usuário dê uma esquiva para frente, no solo ou no ar.</p>
+                        <p class="skill-description">Esquiva por uma curta distância. O tempo de recarga entre as esquivas é de 0,6 segundos, porém, estes valores podem variar.</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------------------------------------->
+            <div class="manto-sombrio">
+                <div class="skill-section">
+                    <img src="assets/manto-sombrio.png" alt="Manto Sombrio" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Manto Sombrio</h2>
+                        <p>Manto formado por substâncias do Abismo. Permite que o usuário corra através dos inimigos e de seus ataques sem sofrer danos.</p>
+                        <p class="skill-description">O Manto Sombrio tem um pequeno tempo de espera (1,5 seg) independente do manto de asa de mariposa. Ela permite avançar através de Inimigos e seus ataques</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo conjunto: Ferrão dos Sonhos/Ferrão dos Sonhos Despertado-->
+        <div class="flip" style="top: 740px;">
+            <div class="ferrao-dos-sonhos">
+                <div class="skill-section">
+                    <img src="assets/ferrao-dos-sonhos.png" alt="Ferrão dos Sonhos" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Ferrão dos Sonhos</h2>
+                        <p>Permite que o portador corte o véu entre os sonhos e a realidade. Pode ser usado para revelar sonhos escondidos ou abrir passagens.</p>
+                        <p class="skill-description">Segure FERRÃO DOS SONHOS para carregar e cortar com o Ferrão.</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------------------------------------->
+            <div class="ferrao-dos-sonhos-despertado">
+                <div class="skill-section">
+                    <img src="assets/ferrao-dos-sonhos-despertado.png" alt="Ferrão dos Sonhos Despertado" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Ferrão dos Sonhos Despertado</h2>
+                        <p>O Ferrão dos Sonhos está aprimorado. Ele pode invadir até a mente mais protegida.</p>
+                        <p class="skill-description">Segure FERRÃO DOS SONHOS para acessar as memórias mais profundas</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    

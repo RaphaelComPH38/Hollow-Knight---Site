@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial';
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+
+section div.background-section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+section div.background-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+section div.box {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section div.box div.conteudo {
+    width: 80%;
+}
+
+section div.box img {
+    width: 80%;
+    min-width: 300px;
+}
+
+section div.box p {
+    color: white;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+    section div.box {
+        width: 100%;
+        padding: 2%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    section div.box div.conteudo {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@font-face {
+    font-family: 'Trajan Pro';
+    src: url('assets/Trajan Pro Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Trajan Pro', serif;
+}
+
+.container {
+    position: static;
+    width: 1000px;
+    height: auto; /* Ajustei a altura total para acomodar as duas seções com espaçamento */
+}
+
+.flip {
+    position: static;
+    width: 1000px;
+    height: 500px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.container:hover .flip:hover {
+    transform: rotateX(180deg);
+}
+
+.espirito-vingativo, .alma-sombria, .mergulho-desolador, .escuridao-descente, .espectros-uivantes, .grito-do-abismo, .manto-de-asa-de-mariposa, .manto-sombrio, .ferrao-dos-sonhos, .ferrao-dos-sonhos-despertado{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.espirito-vingativo, .mergulho-desolador, .espectros-uivantes, .manto-de-asa-de-mariposa, .ferrao-dos-sonhos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.alma-sombria, .escuridao-descente, .grito-do-abismo, .manto-sombrio, .ferrao-dos-sonhos-despertado {
+    transform: rotateX(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+}

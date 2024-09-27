@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Inclua o CSS se precisar -->
+    <style>
+        @font-face {
+            font-family: 'Trajan Pro';
+            src: url('fonts/TrajanPro-Regular.ttf') format('truetype');
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: white;
+            text-align: center;
+        }
+
+        .content-container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 10;
+        }
+
+        .top-image {
+            width: 1000px; /* Diminuído a largura para 250px */
+            height: auto;
+            margin-bottom: 10px;
+            margin-left: 400px;
+        }
+
+        .skill-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .skill-image {
+            width: 300px;
+            height: auto;
+            margin-left: 600px;
+            flex-shrink: 0;
+        }
+
+        .skill-details {
+            max-width: 1000px;
+            text-align: left;
+            margin-left: 100px;
+        }
+
+        .skill-details h2 {
+            font-family: 'Trajan Pro', serif;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            font-size: 62px;
+            margin-bottom: 10px;
+        }
+
+        .skill-details p {
+            font-family: 'Trajan Pro', serif;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 5px;
+        }
+
+        .skill-details .skill-description {
+            font-size: 24px;
+            font-style: italic;
+        }
+
+        .bottom-image {
+            margin-top: 20px;
+        }
+
+        .image-cima {
+            width: 1000px; /* Ajuste a largura conforme necessário */
+            height: auto;
+            margin-left: -8%;
+        }
+
+        .image-baixo {
+            width: 1000px; /* Ajuste a largura conforme necessário */
+            height: auto;
+            margin-left: -8%;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .back-button img {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button img:hover {
+            transform: scale(1.1);
+        }
+
+        .back-button img:active {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="main-page.html" class="back-button">
+        <img src="assets/voltar.png" alt="Voltar">
+    </a>
+
+    <div class="content-container">
+        <!-- Imagem no topo da página -->
+        <img src="assets/chefes.png" alt="Chefes" class="top-image">
+
+         <!--Portal dos Sonhos-->
+        <div class="skill-section">
+            <img src="assets/portal-dos-sonhos.png" alt="Portal dos Sonhos" class="skill-image">
+            <div class="skill-details">
+                <img src="assets/cima.png" alt="Cima" class="image-cima">
+                <h2>Portal dos Sonhos</h2>
+                <p>Permite que o portador viaje instantaneamente através dos sonhos.</p>
+                <p class="skill-description">Segure BAIXO enquanto usa o Ferrão dos Sonhos para abrir um Portal dos Sonhos. Segure CIMA enquanto usa o Ferrão dos Sonhos para viajar para o Portal dos Sonhos. Algumas áreas podem não ter uma conexão forte com qualquer sonho, desativando o uso do Portal dos Sonhos.</p>
+                <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+            </div>
+        </div>
+
+        <!-- Adicione mais seções de habilidades conforme necessário -->
+    </div>

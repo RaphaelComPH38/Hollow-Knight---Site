@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Inclua o CSS se precisar -->
+    <style>
+        @font-face {
+            font-family: 'Trajan Pro';
+            src: url('fonts/TrajanPro-Regular.ttf') format('truetype');
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: white;
+            text-align: center;
+        }
+
+        .content-container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 10;
+        }
+
+        .top-image {
+            width: 1000px; /* Diminuído a largura para 250px */
+            height: auto;
+            margin-bottom: 10px;
+            margin-left: 400px;
+        }
+
+        .skill-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .skill-image {
+            width: 300px;
+            height: auto;
+            margin-left: 600px;
+            flex-shrink: 0;
+        }
+
+        .skill-details {
+            max-width: 1000px;
+            text-align: left;
+            margin-left: 100px;
+        }
+
+        .skill-details h2 {
+            font-family: 'Trajan Pro', serif;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            font-size: 62px;
+            margin-bottom: 10px;
+        }
+
+        .skill-details p {
+            font-family: 'Trajan Pro', serif;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 5px;
+        }
+
+        .skill-details .skill-description {
+            font-size: 24px;
+            font-style: italic;
+        }
+
+        .bottom-image {
+            margin-top: 20px;
+        }
+
+        .image-cima {
+            width: 1000px; /* Ajuste a largura conforme necessário */
+            height: auto;
+            margin-left: -8%;
+        }
+
+        .image-baixo {
+            width: 1000px; /* Ajuste a largura conforme necessário */
+            height: auto;
+            margin-left: -8%;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .back-button img {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button img:hover {
+            transform: scale(1.1);
+        }
+
+        .back-button img:active {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="main-page.html" class="back-button">
+        <img src="assets/voltar.png" alt="Voltar">
+    </a>
+
+    <div class="content-container">
+        <!-- Imagem no topo da página -->
+        <img src="assets/magias.png" alt="Magias" class="top-image">
+
+ 
+
+        <!-- Adicione mais seções de habilidades conforme necessário -->
+    </div>
+
+    <div class="container">
+        <!-- Primeiro conjunto: Espírito Vingativo/Alma Sombria -->
+        <div class="flip" style="top: 740px;">
+            <div class="espirito-vingativo">
+                <div class="skill-section">
+                    <img src="assets/espirito-vingativo.png" alt="Espirito Vingativo" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Espírito Vingativo</h2>
+                        <p>Conjure um espírito que voará para frente e queimará inimigos em seu caminho.</p>
+                        <p class="skill-description">Lança um projétil que passa por inimigos e causa 15 de dano. Estes valores podem variar.</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------------------------------------->
+            <div class="alma-sombria">
+                <div class="skill-section">
+                    <img src="assets/alma_sombria.png" alt="Alma Sombria" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Alma Sombria</h2>
+                        <p>Conjure uma sombra que voará para frente e queimará inimigos em seu caminho.</p>
+                        <p class="skill-description">Lança um projétil que passa por inimigos e causa 30 de dano. Estes valores podem variar.</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Segundo conjunto: Mergulho Desolador/Escuridão Descente -->
+        <div class="flip" style="top: 740px;">
+            <div class="mergulho-desolador">
+                <div class="skill-section">
+                    <img src="assets/mergulho-desolador.png" alt="Mergulho Desolador" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Mergulho Desolador</h2>
+                        <p>Golpeie o solo com uma força concentrada de ALMA. Essa força pode destruir inimigos ou quebrar estruturas frágeis.</p>
+                        <p class="skill-description">Cria uma onde de impacto que causa 35 de dano total em área, que pode destruir estruturas frageis, este valor pode variar.</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------------------------------------->
+            <div class="escuridao-descente">
+                <div class="skill-section">
+                    <img src="assets/escuridao-descente.png" alt="Escuridão Descente" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Escuridão Descente</h2>
+                        <p>Golpeie o solo com uma força concentrada de ALMA e Sombra. Essa força pode destruir inimigos ou quebrar estruturas frágeis.</p>
+                        <p class="skill-description">Cria uma onde de impacto que causa 65 de dano total em área, que pode destruir estruturas frageis, este valor pode variar.</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terceiro conjunto: Espectros Uivantes/Grito do Abismo -->
+        <div class="flip" style="top: 740px;">
+            <div class="espectros-uivantes">
+                <div class="skill-section">
+                    <img src="assets/espectros-uivantes.png" alt="Espectros Uivantes" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Espectros Uivantes</h2>
+                        <p>Destrua inimigos com ALMA gritante. Ao usá-la, libera uma explosão de ALMA para cima.</p>
+                        <p class="skill-description">Causa 39 de dano total em uma area acima do jogador. Este valor pode variar.</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------------------------------------->
+            <div class="grito-do-abismo">
+                <div class="skill-section">
+                    <img src="assets/grito-do-abismo.png" alt="Grito do Abismo" class="skill-image">
+                    <div class="skill-details">
+                        <img src="assets/cima.png" alt="Cima" class="image-cima">
+                        <h2>Grito do Abismo</h2>
+                        <p>Destrua inimigos com ALMA e Sombra gritantes. Ao usá-la, libera uma explosão de ALMA para cima.</p>
+                        <p class="skill-description">Causa 80 de dano total em uma area acima do jogador. Este valor pode variar.</p>
+                        <img src="assets/baixo.png" alt="Baixo" class="image-baixo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                
+    </div>    
+</body>
+</html>
